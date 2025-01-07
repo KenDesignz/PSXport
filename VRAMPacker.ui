@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VRAMPacker</class>
+ <widget class="QWidget" name="VRAMPacker">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>954</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="VRAMPackerLayout" rowstretch="1,1,1" columnstretch="1,3,1">
+     <item row="0" column="2">
+      <widget class="QGroupBox" name="autoPackerBox">
+       <property name="title">
+        <string>Auto Packing</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QVBoxLayout" name="autoPackerLayout">
+          <item>
+           <widget class="QPushButton" name="autopackAllButton">
+            <property name="text">
+             <string>Auto Pack All</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="autopackSelectedButton">
+            <property name="text">
+             <string>Auto Pack Selected</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="autopackUnpackedButton">
+            <property name="text">
+             <string>Auto Pack Unpacked</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QGroupBox" name="manualPositionBox">
+       <property name="title">
+        <string>Manual Position</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_3">
+        <item row="0" column="0">
+         <layout class="QFormLayout" name="manualPositionLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="selectedXLabel">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>VRAM X Pos</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="selectedYLabel">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>VRAM Y Pos</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QSpinBox" name="selectedYSpin">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximum">
+             <number>511</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSpinBox" name="selectedXSpin">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximum">
+             <number>1023</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="2">
+           <widget class="QComboBox" name="viewZoomSelector">
+            <item>
+             <property name="text">
+              <string>25%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>50%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>100%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>200%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>400%</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="2">
+           <widget class="QPushButton" name="exportHeaderButton">
+            <property name="text">
+             <string>Export as Header</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" colspan="2">
+           <widget class="QPushButton" name="exportBinButton">
+            <property name="text">
+             <string>Export as Bin</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QGroupBox" name="frameConfigBox">
+       <property name="title">
+        <string>Frame Buffer Setup</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout_2">
+        <item row="0" column="0">
+         <layout class="QFormLayout" name="frameConfigLayout">
+          <item row="2" column="0">
+           <widget class="QLabel" name="buffer1XPosLabel">
+            <property name="text">
+             <string>X Pos Buffer 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QSpinBox" name="buffer1XPosSelector">
+            <property name="maximum">
+             <number>1023</number>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="buffer1YPosLabel">
+            <property name="text">
+             <string>Y Pos Buffer 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QSpinBox" name="buffer1YPosSelector">
+            <property name="maximum">
+             <number>511</number>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" colspan="2">
+           <widget class="QCheckBox" name="doubleBufferCheck">
+            <property name="text">
+             <string>Double Buffered</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="buffer2XPosLabel">
+            <property name="text">
+             <string>X Pos Buffer 2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="buffer2YPosLabel">
+            <property name="text">
+             <string>Y Pos Buffer 2</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QSpinBox" name="buffer2XPosSelector">
+            <property name="maximum">
+             <number>1023</number>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QSpinBox" name="buffer2YPosSelector">
+            <property name="maximum">
+             <number>511</number>
+            </property>
+            <property name="value">
+             <number>240</number>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="bufferWidthLabel">
+            <property name="text">
+             <string>Buffer Width</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="bufferHeightLabel">
+            <property name="text">
+             <string>Buffer Height</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="bufferWidthSelector">
+            <property name="currentIndex">
+             <number>1</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>256</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>320</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>360</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>512</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>640</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="bufferHeightSelector">
+            <item>
+             <property name="text">
+              <string>240</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>480</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="1" rowspan="3">
+      <widget class="QScrollArea" name="VRAMScrollArea">
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="VRAMScrollAreaWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>499</width>
+          <height>608</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </item>
+     <item row="0" column="0" rowspan="3">
+      <layout class="QVBoxLayout" name="itemListLayout">
+       <item>
+        <widget class="QPushButton" name="packSelectedButton">
+         <property name="text">
+          <string>Pack Selected</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="unpackSelectedButton">
+         <property name="text">
+          <string>Unpack Selected</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="itemListLabel">
+         <property name="text">
+          <string>Items to Pack</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTreeWidget" name="itemList">
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+         <attribute name="headerShowSortIndicator" stdset="0">
+          <bool>true</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Valid</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Packed</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Type</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>doubleBufferCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>buffer2XPosLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>780</x>
+     <y>499</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>760</x>
+     <y>536</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleBufferCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>buffer2YPosLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>796</x>
+     <y>501</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>785</x>
+     <y>565</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleBufferCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>buffer2XPosSelector</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>819</x>
+     <y>503</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>852</x>
+     <y>533</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>doubleBufferCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>buffer2YPosSelector</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>832</x>
+     <y>506</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>840</x>
+     <y>568</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

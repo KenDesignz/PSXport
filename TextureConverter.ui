@@ -1,0 +1,1143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TextureConverter</class>
+ <widget class="QWidget" name="TextureConverter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1077</width>
+    <height>610</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="textureConverterLayout" rowstretch="3,1" columnstretch="1,1,1">
+     <item row="0" column="1">
+      <widget class="QGroupBox" name="originalPreviewBox">
+       <property name="title">
+        <string>Original</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QVBoxLayout" name="originalPreviewLayouy">
+          <item>
+           <widget class="QLabel" name="originalZoomLabel">
+            <property name="text">
+             <string>View Scale</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="originalZoomSelector">
+            <property name="currentText">
+             <string>100%</string>
+            </property>
+            <property name="currentIndex">
+             <number>2</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>25%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>50%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>100%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>200%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>400%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>800%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>1600%</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTabWidget" name="originalMapTabs">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="originalTextureTab">
+             <attribute name="title">
+              <string>Texture</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <layout class="QVBoxLayout" name="originalTextureTabLayout">
+                <item>
+                 <widget class="QScrollArea" name="originalTextureArea">
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="originalTextureAreaWidget">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>283</width>
+                     <height>110</height>
+                    </rect>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_9">
+                    <item row="1" column="0">
+                     <layout class="QGridLayout" name="originalTextureAreaLayout">
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="originalTexture">
+                        <property name="text">
+                         <string>Preview Image</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="originalNormalTab">
+             <attribute name="title">
+              <string>Normal</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <layout class="QVBoxLayout" name="originalNormalTabLayout">
+                <item>
+                 <widget class="QScrollArea" name="originalNormalArea">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="originalNormalAreaWidget">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>283</width>
+                     <height>110</height>
+                    </rect>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_12">
+                    <item row="0" column="0">
+                     <layout class="QGridLayout" name="originalNormalAreaLayout">
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="originalNormal">
+                        <property name="text">
+                         <string>Preview Image</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QGroupBox" name="convertedPreviewBox">
+       <property name="title">
+        <string>Converted</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <layout class="QVBoxLayout" name="convertedPreviewLayout">
+          <item>
+           <widget class="QLabel" name="convertedZoomLabel">
+            <property name="text">
+             <string>View Scale</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="convertedZoomSelector">
+            <property name="currentText">
+             <string>100%</string>
+            </property>
+            <property name="currentIndex">
+             <number>2</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>25%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>50%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>100%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>200%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>400%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>800%</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>1600%</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTabWidget" name="convertedMapTabs">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="convertedTextureTab">
+             <attribute name="title">
+              <string>Texture</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <item>
+               <layout class="QVBoxLayout" name="convertedTextureTabLayout">
+                <item>
+                 <widget class="QScrollArea" name="convertedTextureArea">
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="convertedTextureAreaWidget">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>283</width>
+                     <height>110</height>
+                    </rect>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_10">
+                    <item row="0" column="0">
+                     <layout class="QGridLayout" name="convertedTextureAreaLayout">
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="convertedTexture">
+                        <property name="text">
+                         <string>Preview Image</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="convertedNormalTab">
+             <attribute name="title">
+              <string>Normal</string>
+             </attribute>
+             <layout class="QVBoxLayout" name="verticalLayout_11">
+              <item>
+               <layout class="QVBoxLayout" name="convertedNormalTabLayout">
+                <item>
+                 <widget class="QScrollArea" name="convertedNormalArea">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="widgetResizable">
+                   <bool>true</bool>
+                  </property>
+                  <widget class="QWidget" name="convertedNormalAreaWidget">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>283</width>
+                     <height>110</height>
+                    </rect>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_11">
+                    <item row="0" column="0">
+                     <layout class="QGridLayout" name="convertedNormalAreaLayout">
+                      <item row="0" column="0">
+                       <widget class="QLabel" name="convertedNormal">
+                        <property name="text">
+                         <string>Preview Image</string>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QGroupBox" name="conversionToolBox">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="title">
+        <string>Conversion</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="conversionToolBoxLayout">
+          <item>
+           <widget class="QGroupBox" name="baseTypeBox">
+            <property name="title">
+             <string>Base Type</string>
+            </property>
+            <layout class="QFormLayout" name="formLayout">
+             <item row="0" column="0">
+              <layout class="QFormLayout" name="baseTypeLayout">
+               <item row="0" column="0">
+                <widget class="QRadioButton" name="flatButton">
+                 <property name="text">
+                  <string>Flat</string>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">typeRadioGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QRadioButton" name="gouradButton">
+                 <property name="text">
+                  <string>Gourad</string>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">typeRadioGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QRadioButton" name="texturedButton">
+                 <property name="text">
+                  <string>Textured</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">typeRadioGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="adjustSizeBox">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="title">
+             <string>Dimention Adjustment</string>
+            </property>
+            <layout class="QFormLayout" name="formLayout_3">
+             <item row="0" column="0">
+              <layout class="QFormLayout" name="adjustSizeBoxLayout">
+               <item row="4" column="0">
+                <widget class="QLabel" name="adjustWidthLabel">
+                 <property name="text">
+                  <string>Width (Pixels)</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QSpinBox" name="adjustWidthSpin">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>256</number>
+                 </property>
+                 <property name="value">
+                  <number>32</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="adjustHeightLabel">
+                 <property name="text">
+                  <string>Height (Pixels)</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <widget class="QCheckBox" name="adjustSizeCheck">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="text">
+                  <string>Enable Resize</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QSpinBox" name="adjustHeightSpin">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>256</number>
+                 </property>
+                 <property name="value">
+                  <number>32</number>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0" colspan="2">
+                <widget class="QCheckBox" name="enableTilingCheck">
+                 <property name="text">
+                  <string>Enable Tiling</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0">
+                <widget class="QLabel" name="tileXLabel">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Tile X (Pixels)</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="0">
+                <widget class="QLabel" name="tileYLabel">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Tile Y (Pixels)</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="1">
+                <widget class="QComboBox" name="tileXSelector">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>8</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>16</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>32</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>64</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>128</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>256</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="8" column="1">
+                <widget class="QComboBox" name="tileYSelector">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>8</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>16</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>32</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>64</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>128</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>256</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QRadioButton" name="nearestScaleRadio">
+                 <property name="text">
+                  <string>Nearest</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">scaleRadioGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QRadioButton" name="bilinearScaleRadio">
+                 <property name="text">
+                  <string>Bilinear</string>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">scaleRadioGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="adjustColorBox">
+            <property name="title">
+             <string>Color Adjustment</string>
+            </property>
+            <layout class="QFormLayout" name="formLayout_6">
+             <item row="0" column="0">
+              <layout class="QFormLayout" name="adjustColorBoxLayout">
+               <item row="1" column="0">
+                <widget class="QRadioButton" name="bpp8radio">
+                 <property name="text">
+                  <string>8-bit Indexed</string>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">colorRadioGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QRadioButton" name="bpp4radio">
+                 <property name="text">
+                  <string>4-bit Indexed</string>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">colorRadioGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+               <item row="3" column="0" colspan="2">
+                <widget class="QCheckBox" name="generateCLUTCheck">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Generate CLUT</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0" colspan="2">
+                <widget class="QCheckBox" name="makeSemiTransCheck">
+                 <property name="text">
+                  <string>Make Semi-Trans</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QRadioButton" name="bpp15radio">
+                 <property name="text">
+                  <string>15-bit Direct RGB</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                 <attribute name="buttonGroup">
+                  <string notr="true">colorRadioGroup</string>
+                 </attribute>
+                </widget>
+               </item>
+               <item row="4" column="0" colspan="2">
+                <widget class="QCheckBox" name="ditheringCheck">
+                 <property name="enabled">
+                  <bool>false</bool>
+                 </property>
+                 <property name="text">
+                  <string>Dither Image</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0" colspan="2">
+                <widget class="QCheckBox" name="removeBlackCheck">
+                 <property name="text">
+                  <string>Remove Black</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="convertBox">
+            <property name="title">
+             <string>Apply and Convert</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <layout class="QVBoxLayout" name="convertBoxLayout">
+               <item>
+                <widget class="QPushButton" name="convertButton">
+                 <property name="text">
+                  <string>Convert!</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="unconvertButton">
+                 <property name="text">
+                  <string>Unconvert</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="0" column="0" rowspan="2">
+      <layout class="QVBoxLayout" name="matListLayout">
+       <item>
+        <widget class="QLabel" name="matListLabel">
+         <property name="text">
+          <string>Materials</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTreeWidget" name="matList">
+         <property name="selectionMode">
+          <enum>QAbstractItemView::ExtendedSelection</enum>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+         <property name="columnCount">
+          <number>3</number>
+         </property>
+         <attribute name="headerDefaultSectionSize">
+          <number>200</number>
+         </attribute>
+         <attribute name="headerMinimumSectionSize">
+          <number>20</number>
+         </attribute>
+         <attribute name="headerShowSortIndicator" stdset="0">
+          <bool>true</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Valid</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Converted</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Mat Name</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>adjustSizeCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>nearestScaleRadio</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>572</x>
+     <y>374</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>574</x>
+     <y>397</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>adjustSizeCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>bilinearScaleRadio</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>627</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>652</x>
+     <y>398</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>adjustSizeCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>adjustWidthSpin</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>626</x>
+     <y>375</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>436</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>adjustSizeCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>adjustHeightSpin</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>604</x>
+     <y>374</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>623</x>
+     <y>467</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>adjustSizeCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>adjustWidthLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>634</x>
+     <y>377</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>537</x>
+     <y>431</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>adjustSizeCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>adjustHeightLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>539</x>
+     <y>377</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>540</x>
+     <y>469</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bpp15radio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>generateCLUTCheck</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>841</x>
+     <y>364</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>787</x>
+     <y>436</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bpp8radio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>generateCLUTCheck</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>863</x>
+     <y>384</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>859</x>
+     <y>442</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bpp4radio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>generateCLUTCheck</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>835</x>
+     <y>411</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>847</x>
+     <y>438</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bpp15radio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ditheringCheck</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>814</x>
+     <y>365</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>814</x>
+     <y>459</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bpp8radio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ditheringCheck</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>829</x>
+     <y>390</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>835</x>
+     <y>463</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bpp4radio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ditheringCheck</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>836</x>
+     <y>418</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>875</x>
+     <y>459</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableTilingCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>tileXLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>516</x>
+     <y>501</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>509</x>
+     <y>526</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableTilingCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>tileYLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>528</x>
+     <y>500</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>526</x>
+     <y>558</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableTilingCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>tileXSelector</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>602</x>
+     <y>495</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>609</x>
+     <y>527</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableTilingCheck</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>tileYSelector</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>593</x>
+     <y>498</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>594</x>
+     <y>551</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>flatButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>adjustSizeBox</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>396</x>
+     <y>368</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>489</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gouradButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>adjustColorBox</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>374</x>
+     <y>393</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>726</x>
+     <y>394</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>texturedButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>adjustSizeBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>414</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>490</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>texturedButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>adjustColorBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>369</x>
+     <y>417</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>724</x>
+     <y>416</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>flatButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>adjustColorBox</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>384</x>
+     <y>369</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>740</x>
+     <y>341</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>gouradButton</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>adjustSizeBox</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>367</x>
+     <y>386</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>695</x>
+     <y>351</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <buttongroups>
+  <buttongroup name="colorRadioGroup"/>
+  <buttongroup name="scaleRadioGroup"/>
+  <buttongroup name="typeRadioGroup"/>
+ </buttongroups>
+</ui>
